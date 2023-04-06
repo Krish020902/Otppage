@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { View, StatusBar, TextInput, Text } from "react-native";
+import React, { useState, useEffect } from "react";
+import { View, Text } from "react-native";
 
 const Login = () => {
   return (
-    <View style={{ flex: 1, padding: 30 }}>
+    <View>
       <Text>this is login page</Text>
     </View>
   );

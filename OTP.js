@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import OTPInputView from "@twotalltotems/react-native-otp-input";
 import CountDown from "react-native-countdown-component";
-
+import Timer from "./Timer";
 const OTP = ({ navigation }) => {
   const [timer, setTimer] = useState(120);
   const handleTimer = () => {
@@ -38,17 +38,8 @@ const OTP = ({ navigation }) => {
       />
       <Text style={{ color: "white", height: 15, marginTop: -60 }}>
         Resend OTP in
+        <Timer></Timer>
       </Text>
-      <CountDown
-        until={120}
-        size={15}
-        onFinish={handleTimer}
-        digitStyle={{ backgroundColor: "#FFF" }}
-        digitTxtStyle={{ color: "rgb(132,194,37)" }}
-        timeToShow={["M", "S"]}
-        timeLabels={{ m: "", s: "" }}
-        style={{ marginTop: -25, marginLeft: -30 }}
-      />
     </View>
   );
 };
